@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+Options -Indexes
+php_flag register_globals off
+RewriteEngine on
+php_value output_buffering 14096 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
